@@ -94,7 +94,8 @@ const sendMsg = async () => {
     
     // 监听websocket的各阶段事件 并做相应处理
     socket.addEventListener('open', (event) => {
-        console.log('开启连接！！', event);
+        console.log('开启连接！', event);
+        console.log('已经开启连接！！',inputVal);
         // 发送消息
         let params = {
             "header": {
@@ -120,6 +121,7 @@ const sendMsg = async () => {
             }
         };
         console.log("发送消息");
+        
         socket.send(JSON.stringify(params))
     })
     socket.addEventListener('message', (event) => {
@@ -140,6 +142,7 @@ const sendMsg = async () => {
                     thisres=requestObj.sparkResult;
                     showMessage(thisres,4000,9);
                     // 清空输入框
+                    
                     questionInput.value = '';
                     thisres='';
                     requestObj.sparkResult='';

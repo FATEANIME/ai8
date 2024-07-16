@@ -63,7 +63,7 @@ function loadWidget(config) {
             userActionTimer,
             messageArray = result.message.default,
             lastHoverElement;
-        window.addEventListener("mousemove", () => userAction = true);
+        //window.addEventListener("mousemove", () => userAction = true);
         window.addEventListener("keydown", () => userAction = true);
         setInterval(() => {
             if (userAction) {
@@ -77,7 +77,7 @@ function loadWidget(config) {
             }
         }, 1000);
         showMessage(welcomeMessage(result.time), 7000, 11);
-        window.addEventListener("mouseover", event => {
+        /*window.addEventListener("mouseover", event => {
             for (let { selector, text } of result.mouseover) {
                 if (!event.target.closest(selector)) continue;
                 if (lastHoverElement === selector) return;
@@ -87,7 +87,7 @@ function loadWidget(config) {
                 showMessage(text, 4000, 8);
                 return;
             }
-        });
+        });*/
         window.addEventListener("click", event => {
             for (let { selector, text } of result.click) {
                 if (!event.target.closest(selector)) continue;
