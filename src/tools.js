@@ -34,7 +34,7 @@ const tools = {
         icon: fa_comment,
         callback: showHitokoto
     },
-    "asteroids": {
+    /*"asteroids": {
         icon: fa_paper_plane,
         callback: () => {
             if (window.Asteroids) {
@@ -46,7 +46,7 @@ const tools = {
                 document.head.appendChild(script);
             }
         }
-    },
+    },*/
     "switch-model": {
         icon: fa_user_circle,
         callback: () => {}
