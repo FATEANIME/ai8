@@ -11,9 +11,9 @@ let messageTimer;
 
 
 let requestObj = {
-    APPID: '6483403d',
-    APISecret: 'ZmRlNGUxMjMwZTcxZTVhZTYwOWNjZWE3',
-    APIKey: '9a4eefb7835fd4065f624bee6c308048',
+    APPID: "04d8fedd",
+    APISecret: "NDM4ZDE3MDNjYjQzMGQwMGQyNjkxNTQ3",
+    APIKey: "1f074e078886b46d42870717fe5033ed",
     sparkResult: ''
 }
 let thisres='';
@@ -104,7 +104,7 @@ const sendMsg = async () => {
             "parameter": {
                 "chat": {
                     // "domain": "general",
-                    "domain": "generalv3.5",
+                    "domain": "4.0Ultra",
                     "temperature": 0.5,
                     "max_tokens": 64,
                 }
@@ -165,14 +165,14 @@ const sendMsg = async () => {
 const getWebsocketUrl = () => {
     return new Promise((resovle, reject) => {
         // let url = "wss://spark-api.xf-yun.com/v1.1/chat";
-        let url = "wss://spark-api.xf-yun.com/v3.5/chat";
+        let url = "wss://spark-api.xf-yun.com/v4.0/chat";
         let host = "spark-api.xf-yun.com";
         let apiKeyName = "api_key";
         let date = new Date().toGMTString();
         let algorithm = "hmac-sha256"
         let headers = "host date request-line";
         // let signatureOrigin = `host: ${host}\ndate: ${date}\nGET /v1.1/chat HTTP/1.1`;
-        let signatureOrigin = `host: ${host}\ndate: ${date}\nGET /v3.5/chat HTTP/1.1`;
+        let signatureOrigin = `host: ${host}\ndate: ${date}\nGET /v4.0/chat HTTP/1.1`;
         let signatureSha = CryptoJS.HmacSHA256(signatureOrigin, requestObj.APISecret);
         let signature = CryptoJS.enc.Base64.stringify(signatureSha);
 

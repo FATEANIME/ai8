@@ -1,5 +1,5 @@
 // live2d_path 参数
-const live2d_path = "https://cdn.jsdelivr.net/gh/FATEANIME/ai6@master/";
+const live2d_path = "https://cdn.jsdelivr.net/gh/FATEANIME/ai7@master/";
 //const live2d_path = "/live2d-widget/";
 const a='';
 // 封装异步加载资源的方法
@@ -24,7 +24,7 @@ function loadExternalResource(url, type) {
 	});
 }
 document.body.insertAdjacentHTML("beforeend", `
-	<script src="https://cdn.jsdelivr.net/gh/FATEANIME/ai6@master/src/message.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/FATEANIME/ai7@master/src/message.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
 	<div id="waifu">
 		<div id="waifu-tips"></div>
